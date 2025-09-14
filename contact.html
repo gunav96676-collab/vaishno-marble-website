@@ -1,90 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - VAISHNO MARBLE & GRANITE</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — VAISHNO MARBLE &amp; GRANITE</title>
+  <meta name="description" content="Contact VAISHNO MARBLE &amp; GRANITE — phone numbers, email, showroom address and contact form (Netlify Forms enabled).">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="https://images.unsplash.com/photo-1560184897-fd2eeb6c9f92?auto=format&fit=crop&w=200&q=60" alt="logo" class="brand-logo">
+        <div class="brand-text"><span class="brand-name">VAISHNO</span><span class="brand-sub">MARBLE &amp; GRANITE</span></div>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html" class="active contact-cta">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo"><h2>VAISHNO MARBLE & GRANITE</h2></div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
-            </div>
-            <div class="nav-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-        </div>
-    </nav>
+      <div class="header-actions">
+        <a class="phone" href="tel:+919810887502">+91 98108 87502</a>
+        <button id="hamburgerContact" class="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenuContact" class="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p>📞 Phone: 9810887502, 8076442703, 9667610044</p>
-                    <p>✉️ Email: vaishno.marble.and.granite@gmail.com</p>
-                    <p>📍 Address: Ground Floor, SR Complex, Sector 49, Noida, UP</p>
-                    <p>🌐 Google Maps: <a href="https://goo.gl/maps/yourmaplink" target="_blank" style="color:#2c3e50;">View Location</a></p>
-                </div>
-                <div class="contact-form">
-                    <form action="#" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="subject" placeholder="Subject" required>
-                        <textarea name="message" rows="6" placeholder="Message" required></textarea>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <section class="content fade-in">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you! Fill in the form below and we’ll get back to you soon.</p>
+
+  <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+    <!-- Hidden field required by Netlify -->
+    <input type="hidden" name="form-name" value="contact">
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="9876543210" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <main id="main">
+    <section class="page-hero light">
+      <div class="container">
+        <h1>Contact &amp; Enquiries</h1>
+        <p class="lead">We welcome enquiries for samples, site visits, custom prints and project quotes. Use the contact form or call us directly for a faster response.</p>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>VAISHNO MARBLE & GRANITE</h3>
-                    <p>Premium ceramic tiles from Morbi, Gujarat</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>📞 9810887502, 8076442703, 9667610044</p>
-                    <p>✉️ vaishno.marble.and.granite@gmail.com</p>
-                    <p>📍 <a href="https://goo.gl/maps/yourmaplink" target="_blank" style="color:#fff;">Ground Floor, SR Complex, Sector 49, Noida</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="products.html">Products</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 VAISHNO MARBLE & GRANITE. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <section class="container contact-area">
+      <div class="contact-left">
+        <h2>Get in touch</h2>
+        <p>Phone: <a href="tel:+919810887502">9810887502</a>, <a href="tel:+918076442703">8076442703</a>, <a href="tel:+919667610044">9667610044</a></p>
+        <p>Email: <a href="mailto:vaishno.marble.and.granite@gmail.com">vaishno.marble.and.granite@gmail.com</a></p>
 
-    <script src="js/script.js"></script>
+        <h3>Showroom</h3>
+        <p>VAISHNO MARBLE &amp; GRANITE<br>Ground Floor, SR Complex, Sector 49, Noida, UP</p>
+        <p><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=VAISHNO+MARBLE+%26+GRANITE+Ground+Floor+SR+Complex+Sector+49+Noida+UP" target="_blank">Open in Google Maps</a></p>
+
+        <h3>Rating &amp; Reviews</h3>
+        <p>Support local businesses — please consider leaving a review on Google. Click below to open our listing (search result) where customers can add ratings and reviews.</p>
+        <p><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=VAISHNO+MARBLE+%26+GRANITE+Ground+Floor+SR+Complex+Sector+49+Noida+UP" target="_blank">Rate us on Google</a></p>
+
+        <h3>Working Hours</h3>
+        <p>Mon–Sat: 10:00 AM — 8:00 PM<br>Sunday: 11:00 AM — 5:00 PM (Light visits)</p>
+
+        <h3>Quick Links</h3>
+        <p><a href="products.html">Product Catalogue</a> • <a href="about.html">About Us</a></p>
+      </div>
+
+      <div class="contact-right">
+        <!-- NETLIFY FORM -->
+        <!-- Important: keep data-netlify attribute so Netlify captures submissions -->
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form">
+          <!-- Hidden input required by Netlify -->
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
+
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Optional — e.g. 9810887502">
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="E.g. Sample request / Custom print / Project quote">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required placeholder="Tell us about your project, size needed, location etc."></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
+
+          <p class="form-note">After deployment to Netlify, form submissions will appear in your Netlify dashboard under <strong>Forms</strong>. To get email notifications enable Notifications in Netlify settings.</p>
+        </form>
+
+        <!-- MAP (embedded using search query) -->
+        <div class="map-embed">
+          <iframe title="VAISHNO MARBLE &amp; GRANITE map" src="https://www.google.com/maps?q=VAISHNO+MARBLE+%26+GRANITE+Ground+Floor+SR+Complex+Sector+49+Noida+UP&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+919810887502">9810887502</a></p>
+        <p>Email: <a href="mailto:vaishno.marble.and.granite@gmail.com">vaishno.marble.and.granite@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Ground Floor, SR Complex, Sector 49, Noida, UP — <a href="https://www.google.com/maps/search/?api=1&query=VAISHNO+MARBLE+%26+GRANITE+Ground+Floor+SR+Complex+Sector+49+Noida+UP" target="_blank">Open in Maps</a></p>
+      </div>
+      <div class="footer-col social">
+        <h4>Connect</h4>
+        <p><a href="https://wa.me/919810887502" target="_blank">WhatsApp</a> • <a href="https://www.facebook.com/" target="_blank">Facebook</a> • <a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© <span id="yearContact"></span> VAISHNO MARBLE &amp; GRANITE</div></div>
+  </footer>
 </body>
 </html>
