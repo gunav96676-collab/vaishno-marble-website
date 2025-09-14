@@ -1,104 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - VAISHNO MARBLE & GRANITE</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — VAISHNO MARBLE &amp; GRANITE</title>
+  <meta name="description" content="Explore the full product range of ceramic tiles, sizes and custom printed options.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo"><h2>VAISHNO MARBLE & GRANITE</h2></div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="products.html" class="nav-link active">Products</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="https://images.unsplash.com/photo-1560184897-fd2eeb6c9f92?auto=format&fit=crop&w=200&q=60" alt="logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">VAISHNO</span>
+          <span class="brand-sub">MARBLE &amp; GRANITE</span>
         </div>
-    </nav>
+      </a>
 
-    <!-- Products Section -->
-    <section class="products">
-        <div class="container">
-            <h2>Our Tile Collections</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="images/marble.jpg" alt="Marble Effect Tiles">
-                    <h3>Marble Effect Tiles</h3>
-                    <p>Elegant and durable marble-look ceramic tiles, available in multiple sizes.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/wooden.jpg" alt="Wooden Pattern Tiles">
-                    <h3>Wooden Pattern Tiles</h3>
-                    <p>Natural wood appearance with ceramic durability, perfect for modern interiors.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/geometric.jpg" alt="Geometric Pattern Tiles">
-                    <h3>Geometric Patterns</h3>
-                    <p>Contemporary designs that add style and elegance to any space.</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/custom.jpg" alt="Custom Printed Tiles">
-                    <h3>Custom Printed Tiles</h3>
-                    <p>Create personalized designs tailored for your unique project or space.</p>
-                </div>
-            </div>
-        </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html" class="contact-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone" href="tel:+919810887502">+91 98108 87502</a>
+        <button id="hamburgerProducts" class="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenuProducts" class="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero light">
+      <div class="container">
+        <h1>Product Catalogue</h1>
+        <p class="lead">We deal exclusively in high-quality ceramic tiles sourced from Morbi, Gujarat. Below is a visual catalogue grouped by style and size. Click any image to view a larger version and read full details.</p>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Need Help Choosing Tiles?</h2>
-            <p>Contact our experts to find the perfect tiles for your space</p>
-            <a href="contact.html" class="btn-primary">Contact Us</a>
-        </div>
+    <section class="container products-catalog">
+      <div class="filters">
+        <span class="filter-label">Filter by size:</span>
+        <button class="chip" data-filter="all">All</button>
+        <button class="chip" data-filter="4x2">4×2</button>
+        <button class="chip" data-filter="2x2">2×2</button>
+        <button class="chip" data-filter="12x18">12×18</button>
+        <button class="chip" data-filter="12x12">12×12</button>
+      </div>
+
+      <div class="grid products-grid">
+        <!-- Each product-card has data-size attribute for filtering -->
+        <article class="product-card" data-size="4x2">
+          <button class="gallery-item" data-src="https://images.unsplash.com/photo-1598300056393-4ff0a69a6ef7?auto=format&fit=crop&w=1400&q=80" aria-label="4x2 tile large view">
+            <img src="https://images.unsplash.com/photo-1598300056393-4ff0a69a6ef7?auto=format&fit=crop&w=600&q=60" alt="4x2 tiles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>4×2 Ceramic</h3>
+            <p>Durable tiles suited for floors and walls. Finish: polished / matte available.</p>
+          </div>
+        </article>
+
+        <article class="product-card" data-size="2x2">
+          <button class="gallery-item" data-src="https://images.unsplash.com/photo-1542317854-2f0f6d57e0f6?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1542317854-2f0f6d57e0f6?auto=format&fit=crop&w=600&q=60" alt="2x2 tiles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>2×2 Ceramic</h3>
+            <p>Classic tile size for patterned designs, mosaics and decorative areas.</p>
+          </div>
+        </article>
+
+        <article class="product-card" data-size="12x18">
+          <button class="gallery-item" data-src="https://images.unsplash.com/photo-1560184897-fd2eeb6c9f92?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1560184897-fd2eeb6c9f92?auto=format&fit=crop&w=600&q=60" alt="12x18 tiles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>12×18 Ceramic</h3>
+            <p>Large-format tiles which reduce grout lines, ideal for contemporary interiors.</p>
+          </div>
+        </article>
+
+        <article class="product-card" data-size="12x12">
+          <button class="gallery-item" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=60" alt="12x12 tiles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>12×12 Ceramic</h3>
+            <p>Highly versatile size used widely in kitchens and bathrooms.</p>
+          </div>
+        </article>
+
+        <article class="product-card" data-size="12x18">
+          <button class="gallery-item" data-src="https://images.unsplash.com/photo-1505692794402-5dd74b0264d5?auto=format&fit=crop&w=1400&q=80">
+            <img src="https://images.unsplash.com/photo-1505692794402-5dd74b0264d5?auto=format&fit=crop&w=600&q=60" alt="marble effect tiles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>Marble Effect</h3>
+            <p>Luxury marble-look ceramic tiles — an affordable, low-maintenance alternative to natural stone.</p>
+          </div>
+        </article>
+
+        <article class="product-card custom" data-size="custom">
+          <img src="https://images.unsplash.com/photo-1590073244604-5d2b6b55e4dd?auto=format&fit=crop&w=800&q=60" alt="custom printed tiles" loading="lazy">
+          <div class="card-body">
+            <h3>Custom Printed Tiles</h3>
+            <p>We convert your design or logo into long-lasting printed ceramic tiles. Ideal for branding, cafes, feature walls and signature floors.</p>
+            <a href="contact.html#custom" class="btn btn-primary small">Request Custom Quote</a>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>VAISHNO MARBLE & GRANITE</h3>
-                    <p>Premium ceramic tiles from Morbi, Gujarat</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>📞 9810887502, 8076442703, 9667610044</p>
-                    <p>✉️ vaishno.marble.and.granite@gmail.com</p>
-                    <p>📍 <a href="https://goo.gl/maps/yourmaplink" target="_blank" style="color:#fff;">Ground Floor, SR Complex, Sector 49, Noida</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="products.html">Products</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 VAISHNO MARBLE & GRANITE. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <section class="container more-info">
+      <h2>Ordering &amp; Samples</h2>
+      <p>To order or request samples, please visit the showroom with your project dimensions. For large orders we arrange direct deliveries and can advise on packaging and installation logistics. We request customers to see samples at the showroom before placing orders — tile appearance can vary with light and grout choice.</p>
+    </section>
+  </main>
 
-    <script src="js/script.js"></script>
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+919810887502">9810887502</a></p>
+        <p>Email: <a href="mailto:vaishno.marble.and.granite@gmail.com">vaishno.marble.and.granite@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Ground Floor, SR Complex, Sector 49, Noida, UP — <a href="https://www.google.com/maps/search/?api=1&query=VAISHNO+MARBLE+%26+GRANITE+Ground+Floor+SR+Complex+Sector+49+Noida+UP" target="_blank">Open in Maps</a></p>
+      </div>
+      <div class="footer-col social">
+        <h4>Connect</h4>
+        <p><a href="https://wa.me/919810887502" target="_blank">WhatsApp</a> • <a href="https://www.facebook.com/" target="_blank">Facebook</a> • <a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© <span id="yearProducts"></span> VAISHNO MARBLE &amp; GRANITE</div></div>
+  </footer>
 </body>
 </html>
